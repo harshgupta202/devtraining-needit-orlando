@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="email_client=true,hasWorkflow=true,live_feed=true,all_tables.query_hints=true" audit="true" extends="task" label="Incident" max_length="40" name="incident" sizeclass="65" text_index="true" type="collection">
+        <element attributes="edge_encryption_enabled=true" choice="1" dependent="x_58872_needit_type" dependent_on_field="x_58872_needit_type" label="Concept" max_length="40" name="x_58872_needit_concept" type="string" use_dependent_field="true">
+            <choice>
+                <element dependent_value="service" inactive_on_update="false" label="happy 1" value="happy1"/>
+                <element dependent_value="service" inactive_on_update="false" label="happy2" value="happy2"/>
+                <element dependent_value="knowledge" inactive_on_update="false" label="happy3" value="happy3"/>
+                <element dependent_value="knowledge" inactive_on_update="false" label="happy4" value="happy4"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Is Critical" max_length="40" name="x_58872_needit_is_critical" type="string">
+            <choice/>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Type" max_length="40" name="x_58872_needit_type" type="string">
+            <choice>
+                <element inactive_on_update="false" label="knowledge Management" value="knowledge"/>
+                <element inactive_on_update="false" label="ServiceNow  Management" value="service"/>
+            </choice>
+        </element>
+    </element>
+</database>
